@@ -12,12 +12,13 @@ def main():
     
     clock = pygame.time.Clock()
     dt = 0
-    
+
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
 
     while True:
         screen.fill(pygame.Color("black"))
         player.draw(screen)
+        player.update(dt)
         pygame.display.flip()
 
         for event in pygame.event.get():
